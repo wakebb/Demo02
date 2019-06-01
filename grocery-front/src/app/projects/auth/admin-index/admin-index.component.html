@@ -1,0 +1,26 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Admin Manage Center</a>
+      </div>
+      <ul class="nav navbar-nav" *ngIf="this.authService.loggedIn | async">
+        <li>
+          <a routerLink="/admin/regist-admin" routerLinkActive="active">Register an Admin</a>
+        </li>
+        <li>
+          <a routerLink="/admin/orderAll" routerLinkActive="active">Orders Management</a>
+        </li>
+        <li>
+          <a routerLink="/admin/addGrocery" routerLinkActive="active">Add Grocery</a>
+        </li>
+        <li>
+          <a routerLink="/admin/logout" routerLinkActive="active">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

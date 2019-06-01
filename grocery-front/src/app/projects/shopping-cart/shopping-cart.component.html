@@ -1,0 +1,41 @@
+<div>
+  <div>
+    <h4><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</h4>
+  </div>
+  <div>
+    <table class="table table-hover table-responsive" id="my-cart-table">
+      <tbody>
+
+        <tr *ngFor="let gro of grocery; let i = index">
+          <td class="text-center" style="width: 30px;">
+            <img width="30px" height="30px" src="{{serverUrl + gro.pic}}">
+          </td><td>{{ gro.gro_name }}</td>
+          <td>${{ gro.price }}</td>
+          <td>
+            <input type="number" min="1" style="width: 70px;" class="my-product-quantity" [(ngModel)]="gro.cart_cnt" (change)="triggerCart(gro.cart_cnt, i)">
+          </td>
+          <td class="my-product-total">${{ gro.price }}</td>
+          <td class="text-center" style="width: 30px;">
+            <a class="btn btn-xs btn-danger my-product-remove" (click)="removeGro(i)">X</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td><strong>Total</strong></td>
+          <td></td><td></td>
+          <td><strong id="my-cart-grand-total">${{ totalPrice }}</strong></td>
+          <td></td>
+        </tr>
+
+        <tr style="color: #876ba5"><td></td>
+          <td><strong>Total </strong></td>
+          <td></td><td></td>
+          <td><strong id="my-cart-discount-price">${{ totalPrice }}</strong></td>
+          <td><button style="background-color: #876ba5" class="btn btn-danger btn-lg" routerLink="/cart/confirm" *ngIf="totalPrice > 0">check out</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

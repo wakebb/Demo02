@@ -1,0 +1,85 @@
+<div class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="/">
+        <img src="../assets/images/logo.png" alt="Techro HTML5 template"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav pull-right mainNav">
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/weather" routerLinkActive="active">Weather</a></li>
+        <li><a routerLink="/grocery" routerLinkActive="active">Grocery</a></li>
+        <li><a routerLink="/user/register" routerLinkActive="active">Register</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li><a routerLink="/cart" routerLinkActive="active"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+        <li><a routerLink="/logout" routerLinkActive="active">Logout</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</div>
+<!-- /.navbar -->
+
+<header id="head" class="secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Sweet Home</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- container -->
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <section id="portfolio" class="page-section section appear clearfix">
+        <br />
+        <br />
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
+
+</section>
+<!-- /container -->
+
+<footer id="footer">
+  <div class="container">
+
+    <div class="clear"></div>
+    <!--CLEAR FLOATS-->
+  </div>
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav">
+              <a routerLink="/" routerLinkActive="active">Home</a> |
+              <a routerLink="/weather" routerLinkActive="active">Weather</a> |
+              <a routerLink="/grocery" routerLinkActive="active">All Grocery</a> |
+              <a routerLink="/admin" routerLinkActive="active">Admin Login</a> |
+            </p>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right">
+              Copyright &copy;  <a href="" target="_blank" title="Home">Home.</a><a href="" title="Home" target="_blank"></a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /row of panels -->
+    </div>
+  </div>
+</footer>
+
+
